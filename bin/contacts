@@ -1,1 +1,5 @@
 require_relative "../lib/contacts.rb"
+
+puts remove_strawberry
+
+#To run this file, in the terminal type: ruby bin/contacts
