@@ -18,8 +18,7 @@ contacts = {
   "Jon Snow" => {
     name: "Jon",
     email: "jon_snow@thewall.we", 
-    favorite_icecream_flavors: ["chocolate", "vanilla"],
-    knows: nil
+    favorite_icecream_flavors: ["chocolate", "vanilla"]
   },
   "Freddy Mercury" => {
     name: "Freddy",
@@ -59,7 +58,7 @@ In the terminal, let's hit the `pry` by running `ruby bin/contacts`, and check t
 => "Jon Snow"
   
 > contact_details_hash
-=> {:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla"], :knows=>nil}
+=> {:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla"]}
 ```
 
 Excellent! They do.
@@ -117,8 +116,7 @@ def remove_strawberry
     "Jon Snow" => {
       name: "Jon",
       email: "jon_snow@thewall.we", 
-      favorite_icecream_flavors: ["chocolate", "vanilla"],
-      knows: nil
+      favorite_icecream_flavors: ["chocolate", "vanilla"]
     },
     "Freddy Mercury" => {
       name: "Freddy",
