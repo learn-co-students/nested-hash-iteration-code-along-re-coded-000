@@ -87,7 +87,7 @@ Again, let's check it out in the terminal. You should see:
 ###Step 3. Locate the element we're looking for
 ```ruby
 contacts.each do |person, contact_details_hash|
-  contact_details_hash.each do ||
+  contact_details_hash.each do |attribute, data|
     if attribute == :favorite_icecream_flavors
       binding.pry
     end
@@ -103,7 +103,7 @@ Lastly, we will use `delete_if` to iterate through the ice cream array and remov
 
 ```ruby
 contacts.each do |person, contact_details_hash|
-  contact_details_hash.each do ||
+  contact_details_hash.each do |attribute, data|
     if attribute == :favorite_icecream_flavors
       data.delete_if {|ice_cream| ice_cream == "strawberry"}
     end
