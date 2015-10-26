@@ -111,8 +111,6 @@ contacts.each do |person, contact_details_hash|
 end
 ```
 
-*Remember, to return the hash at the end of the method*
-
 ```ruby
 def remove_strawberry
   contacts = {
@@ -136,9 +134,8 @@ def remove_strawberry
       end
     end
   end
-  contacts
 end
 ```
 
-Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the new hash without strawberry ice cream.
+Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream.
 
