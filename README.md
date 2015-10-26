@@ -74,7 +74,7 @@ contacts.each do |person, contact_details_hash|
 end
 ```
 
-Again, let's check it out in the terminal. You should see:
+Again, let's jump into our `binding.pry`. You should see:
 
 ```bash
 > attribute
