@@ -95,11 +95,11 @@ contacts.each do |person, contact_details_hash|
 end
 ```
 
-What is `data` when we hit the binding? If it's unclear, check it out in the terminal. 
+What is `data` when we hit the binding? If it's unclear, let's go into our binding. 
 
 ###Step 4. Update the hash
 
-Lastly, we will use `delete_if` to iterate through the ice cream array and remove any element that matches "strawberry":
+Lastly, we will use `delete_if` to iterate through the ice cream array and remove any element that matches "strawberry". `delete_if` will iterate through the hash and delete the key/value pair if the block returns `true`. [Learn more about it in the ruby docs.](http://ruby-doc.org/core-1.9.3/Hash.html#method-i-delete_if).
 
 ```ruby
 contacts.each do |person, contact_details_hash|
