@@ -15,5 +15,4 @@ require 'pry'
   # }
 def remove_strawberry(contacts)
 
-  #Your code goes here
 end
