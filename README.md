@@ -125,3 +125,5 @@ end
 
 Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream.
 
+
+<a href='https://learn.co/lessons/nested-hash-iteration-code-along' data-visibility='hidden'>View this lesson on Learn.co</a>
