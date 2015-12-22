@@ -1,11 +1,12 @@
 # Code Along: Manipulating Nested Hashes
-##Objectives
-* Become familiar with iterating through a nested hash
-* Know where you are at each level of the iteration
-* Modify the correct element in a nested hash
 
-##Introduction
-###Why this is important
+##Objectives
+
+1. Iterate through a nested hash
+2. Modify the correct element in a nested hash
+
+## Why Nested Hashes Matter 
+
 So much of what we do in programming involves storing data in hashes. Often the hashes that we will encounter will have more than one level. As we get into the web, this will become abundantly clear. To build programs in the future, we'll absolutely need to get comfortable working with hashes. Let's get started!
 
 
@@ -28,22 +29,21 @@ contacts = {
 }
 ```
 
-Your good buddy Freddy Mercury has recently developed a strawberry allergy! You need to delete `"strawberry"` from his list of favorite ice cream flavors. In the `remove_strawberry` method. 
+Your good buddy Freddy Mercury has recently developed a strawberry allergy! You need to delete `"strawberry"` from his list of favorite ice cream flavors in the `remove_strawberry` method. 
 
-* Iterate over the `contacts` hash and when you reach the key of `:favorite_icecream_flavors`, remove `"strawberry"` from the array of Freddy's favorite ice cream flavors. There are at least two ways you can accomplish this:
-  * You can iterate through the hash and, when you reach the appropriate level, check to see if the key `==` ("is equal to") `:favorite_icecream_flavors`. If it does, check to see if that array contains `"strawberry"`. If it does, then delete it from the array. 
-  * OR you can directly iterate over the hash that is the value of the `"Freddy Mercury"` key by calling an enumerator method in `contacts["Freddy Mercury"]`.  
-**Hint:** *Use the* `.delete_if` *method to eliminate strawberry from the appropriate array.*  
-**Hint:** *Remember that the* `remove_strawberry` *method needs to return the newly altered* `contacts` *hash.* 
+Iterate over the `contacts` hash and when you reach the key `:favorite_icecream_flavors`, remove `"strawberry"` from the array of Freddy's favorite ice cream flavors. 
 
-Okay, let's go over it together.
+There are at least two ways you can accomplish this, and for this codealong, we'll work with the second way.
+  1. You can iterate through the hash and, when you reach the appropriate level, check to see if the key `==` ("is equal to") `:favorite_icecream_flavors`. If it does, check to see if that array contains `"strawberry"`. If it does, then delete it from the array. 
+  2. You can directly iterate over the hash that is the value of the `"Freddy Mercury"` key by calling an enumerator method in `contacts["Freddy Mercury"]`.  
 
 ###Step 1. Iterate over the first level
-Inside the `remove_strawberry` method, let's take our first dive into the contacts hash. Then we'll throw a `binding.pry` in to see where we are.
+
+Inside the `remove_strawberry` method, let's take our first dive into the contacts hash. Then we'll use `binding.pry` to see where we are.
 
 We are going to first iterate over the top level of the hash where the keys should be the person and the values should be a hash of details about the person.
 
-*Brief aside on variable naming: This process will be remarkably easier if you name your variables to accurately reflect the data they represent. For now, when the value we're iterating over is another hash, we will explicitly add a `_hash` to the end of the variable name (E.G. `contact_details_hash` below).*
+*Note on variable naming: This process will be remarkably easier if you name your variables to accurately reflect the data they represent. For now, when the value we're iterating over is another hash, we will explicitly add a `_hash` to the end of the variable name (E.G. `contact_details_hash` below).*
 
 ```ruby
 contacts.each do |person, contact_details_hash|
@@ -84,6 +84,7 @@ Again, let's jump into our `binding.pry`. You should see:
 ```
 
 ###Step 3. Locate the element we're looking for
+
 ```ruby
 contacts.each do |person, contact_details_hash|
   contact_details_hash.each do |attribute, data|
@@ -122,5 +123,7 @@ def remove_strawberry(contacts)
 end
 ```
 
-Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream.
+Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream. Also, be sure to run the specs to make sure they pass.
 
+
+<a href='https://learn.co/lessons/nested-hash-iteration-code-along' data-visibility='hidden'>View this lesson on Learn.co</a>
