@@ -123,7 +123,7 @@ def remove_strawberry(contacts)
 end
 ```
 
-Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream.
+Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream. Also, be sure to run the specs to make sure they pass.
 
 
 <a href='https://learn.co/lessons/nested-hash-iteration-code-along' data-visibility='hidden'>View this lesson on Learn.co</a>
