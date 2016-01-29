@@ -126,4 +126,4 @@ end
 Congrats! You made it. Test that your method works by running `ruby bin/contacts` in the terminal. It should output the hash without strawberry ice cream. Also, be sure to run the specs to make sure they pass.
 
 
-<a href='https://learn.co/lessons/nested-hash-iteration-code-along' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/nested-hash-iteration-code-along' title='Code Along: Manipulating Nested Hashes'>Code Along: Manipulating Nested Hashes</a> on Learn.co and start learning to code for free.</p>
