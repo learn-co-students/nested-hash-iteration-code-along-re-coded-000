@@ -5,7 +5,7 @@
 1. Iterate through a nested hash
 2. Modify the correct element in a nested hash
 
-## Why Nested Hashes Matter 
+## Why Nested Hashes Matter
 
 So much of what we do in programming involves storing data in hashes. Often the hashes that we will encounter will have more than one level. As we get into the web, this will become abundantly clear. To build programs in the future, we'll absolutely need to get comfortable working with hashes. Let's get started!
 
@@ -18,23 +18,23 @@ Fork and clone this lab. You'll be coding your solution in `lib/contacts.rb`. Yo
 contacts = {
   "Jon Snow" => {
     name: "Jon",
-    email: "jon_snow@thewall.we", 
-    favorite_icecream_flavors: ["chocolate", "vanilla"]
+    email: "jon_snow@thewall.we",
+    favorite_ice_cream_flavors: ["chocolate", "vanilla"]
   },
   "Freddy Mercury" => {
     name: "Freddy",
     email: "freddy@mercury.com",
-    favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
+    favorite_ice_cream_flavors: ["strawberry", "cookie dough", "mint chip"]
   }
 }
 ```
 
-Your good buddy Freddy Mercury has recently developed a strawberry allergy! You need to delete `"strawberry"` from his list of favorite ice cream flavors in the `remove_strawberry` method. 
+Your good buddy Freddy Mercury has recently developed a strawberry allergy! You need to delete `"strawberry"` from his list of favorite ice cream flavors in the `remove_strawberry` method.
 
-Iterate over the `contacts` hash and when you reach the key `:favorite_icecream_flavors`, remove `"strawberry"` from the array of Freddy's favorite ice cream flavors. 
+Iterate over the `contacts` hash and when you reach the key `:favorite_ice_cream_flavors`, remove `"strawberry"` from the array of Freddy's favorite ice cream flavors.
 
 There are at least two ways you can accomplish this, and for this codealong, we'll work with the second way.
-  1. You can iterate through the hash and, when you reach the appropriate level, check to see if the key `==` ("is equal to") `:favorite_icecream_flavors`. If it does, check to see if that array contains `"strawberry"`. If it does, then delete it from the array. 
+  1. You can iterate through the hash and, when you reach the appropriate level, check to see if the key `==` ("is equal to") `:favorite_ice_cream_flavors`. If it does, check to see if that array contains `"strawberry"`. If it does, then delete it from the array.
   2. You can directly iterate over the hash that is the value of the `"Freddy Mercury"` key by calling an enumerator method in `contacts["Freddy Mercury"]`.  
 
 ###Step 1. Iterate over the first level
@@ -56,9 +56,9 @@ In the terminal, let's hit the `pry` by running `ruby bin/contacts`, and check t
 ```bash
 > person
 => "Jon Snow"
-  
+
 > contact_details_hash
-=> {:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla"]}
+=> {:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_ice_cream_flavors=>["chocolate", "vanilla"]}
 ```
 
 Excellent! They do.
@@ -78,7 +78,7 @@ Again, let's jump into our `binding.pry`. You should see:
 ```bash
 > attribute
 => :name
-  
+
 > data
 => "Jon"
 ```
@@ -88,14 +88,14 @@ Again, let's jump into our `binding.pry`. You should see:
 ```ruby
 contacts.each do |person, contact_details_hash|
   contact_details_hash.each do |attribute, data|
-    if attribute == :favorite_icecream_flavors
+    if attribute == :favorite_ice_cream_flavors
       binding.pry
     end
   end
 end
 ```
 
-What is `data` when we hit the binding? If it's unclear, let's go into our binding. 
+What is `data` when we hit the binding? If it's unclear, let's go into our binding.
 
 ###Step 4. Update the hash
 
@@ -104,7 +104,7 @@ Lastly, we will use `delete_if` to iterate through the ice cream array and remov
 ```ruby
 contacts.each do |person, contact_details_hash|
   contact_details_hash.each do |attribute, data|
-    if attribute == :favorite_icecream_flavors
+    if attribute == :favorite_ice_cream_flavors
       data.delete_if {|ice_cream| ice_cream == "strawberry"}
     end
   end
@@ -115,7 +115,7 @@ end
 def remove_strawberry(contacts)
   contacts.each do |person, contact_details_hash|
     contact_details_hash.each do |attribute, data|
-      if attribute == :favorite_icecream_flavors
+      if attribute == :favorite_ice_cream_flavors
         data.delete_if {|ice_cream| ice_cream == "strawberry"}
       end
     end
