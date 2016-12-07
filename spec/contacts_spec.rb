@@ -2,12 +2,12 @@ require_relative 'spec_helper'
 require_relative '../lib/contacts.rb'
 
 
-describe "#remove_strawberry" do 
-  let :contacts do 
+describe "#remove_strawberry" do
+  let :contacts do
     {
       "Jon Snow" => {
         name: "Jon",
-        email: "jon_snow@thewall.we", 
+        email: "jon_snow@thewall.we",
         favorite_icecream_flavors: ["chocolate", "vanilla"]
       },
       "Freddy Mercury" => {
@@ -18,7 +18,7 @@ describe "#remove_strawberry" do
     }
   end
 
-  it "removes the strawberry ice cream from :favorite_icecream_flavors" do 
+  it "removes the strawberry ice cream from :favorite_icecream_flavors" do
     result = remove_strawberry(contacts)
     expect(result["Freddy Mercury"][:favorite_icecream_flavors]).to_not include("strawberry")
   end
