@@ -1,9 +1,10 @@
-require_relative "../lib/contacts.rb"
+#!/usr/bin/env ruby
+require_relative '../lib/contacts.rb'
 
 contacts = {
    "Jon Snow" => {
      name: "Jon",
-     email: "jon_snow@thewall.we", 
+     email: "jon_snow@thewall.we",
      favorite_icecream_flavors: ["chocolate", "vanilla"]
    },
    "Freddy Mercury" => {
