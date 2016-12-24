@@ -4,7 +4,7 @@ require 'pry'
   # contacts = {
   #   "Jon Snow" => {
   #     name: "Jon",
-  #     email: "jon_snow@thewall.we", 
+  #     email: "jon_snow@thewall.we",
   #     favorite_icecream_flavors: ["chocolate", "vanilla"]
   #   },
   #   "Freddy Mercury" => {
@@ -13,7 +13,14 @@ require 'pry'
   #     favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
   #   }
   # }
-  
-def remove_strawberry(contacts)
 
+def remove_strawberry(contacts)
+contacts.each do |person,data|
+  data.each do |attribute,details|
+    if attribute==:favorite_icecream_flavors
+details.delete_if{|favorite_icecream| favorite_icecream=="strawberry"}
+
+end
+    end
+  end
 end
